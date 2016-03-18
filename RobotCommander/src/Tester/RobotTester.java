@@ -7,7 +7,10 @@ import robotModel.*;
 import java.util.Map;
 import java.util.HashMap;
 
-
+/*
+* Tests various components of the system
+* Also the entry point to the application
+*/
 public class RobotTester {
 	public static void main(String[] args){
 		//testRobotMouseTracker();
@@ -30,11 +33,13 @@ public class RobotTester {
 		}
 	}
 	
+	//Tests to make sure the mouse tracker works as intended
 	public static void testRobotMouseTracker(){
 		MouseTracker mouseTracker = new MouseTracker();
 		mouseTracker.startMouseTracker();
 	}
 	
+	//makes sure that saving command map works correctly
 	public static void testFileHelper(){
 		CommandFileHelper c = new CommandFileHelper();
 		Map<String,String> commandMap = new HashMap<String,String>();
@@ -49,6 +54,7 @@ public class RobotTester {
 		}
 	}
 	
+	//Starts the Actual program
 	public static void testGUI(){
 		try {
 			ICommandModel model = new CommandModel();
